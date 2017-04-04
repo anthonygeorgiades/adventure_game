@@ -1,0 +1,134 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- consult('/Users/anthonygeorgiades/Dropbox/MCIT/CIS 554/Adventure Game/adventure.pl').
+true.
+
+2 ?- start.
+
+Enter commands using standard Prolog syntax.
+Available commands are:
+start.             -- to start the game.
+n.  s.  e.  w.     -- to go in that direction.
+take(Object).      -- to pick up an object.
+drop(Object).      -- to put down an object.
+look.              -- to look around you again.
+instructions.      -- to see this message again.
+i.                 -- to see what you are currently holding.
+halt.              -- to end the game and quit.
+
+You are Pablo Escobar and you are currently in the lounge of La Catedral. You are under attack by the DEA! Luckily, you have built an escape tunnel, which you can only open with the key. Unfortunately, the key is locked in the safe which requires a special combo to open. The combination is hidden somewhere in La Catedral!
+You are at the lounge and getting attacked. Go to the safe, get the key, go to tunnel and escape
+
+There is a gun here.
+There is a machete here.
+
+true.
+
+3 ?- go(s).
+You are in the hallway! You can either go to the backdoor or turnaround and go back to the lounge
+
+There is a dresser here.
+
+true.
+
+4 ?- go(e).
+You can't go that way.
+true.
+
+5 ?- go(w).
+You cannot leave through the backdoor becasue they have surrounded the buildling! Go back and find the combination, use it to open the safe, get the key in the safe and leave through the tunnel!
+
+Is there anything here?
+false.
+
+6 ?- take(combination).
+You are now holding combination!
+true.
+
+7 ?- go(e).
+You are in the hallway! You can either go to the backdoor or turnaround and go back to the lounge
+
+There is a dresser here.
+
+true.
+
+8 ?- go(n).
+You are at the lounge and getting attacked. Go to the safe, get the key, go to tunnel and escape
+
+There is a gun here.
+There is a machete here.
+
+true.
+
+9 ?- go(w).
+You can't go that way.
+true.
+
+10 ?- go(e).
+You are at the front door and under heavy attack! You do not have eough ammo to fend everyone else! Turn around or blow everyone up with the bomb!
+
+
+true.
+
+11 ?- go(w).
+You are at the lounge and getting attacked. Go to the safe, get the key, go to tunnel and escape
+
+There is a gun here.
+There is a machete here.
+
+true.
+
+12 ?- go(s).
+You are in the hallway! You can either go to the backdoor or turnaround and go back to the lounge
+
+There is a dresser here.
+
+true.
+
+13 ?- go(n).
+You are at the lounge and getting attacked. Go to the safe, get the key, go to tunnel and escape
+
+There is a gun here.
+There is a machete here.
+
+true.
+
+14 ?- go(n).
+You are at the entrance of the safe! To open the safe, you need the combination hidden somewhere in La Catedral! Once you open the safe, you can retrieve the key to enter the tunnel or the bomb to self destruct
+
+
+true.
+
+15 ?- go(n).
+You can't go that way.
+true.
+
+16 ?- go(w).
+You have opened the safe!  Now you can take the key and proceed to the tunnel entrance, or take the bomb. Choose your own fate!
+
+There is a bomb here.
+There is a money here.
+There is a key here.
+
+true.
+
+17 ?- take(key).
+You are now holding key!
+true.
+
+18 ?- go(w).
+You can now open entrance and enter the the tunnel to escape!  With the key in hand, unlock the lock to go into the tunnel and escape. You must have key! If not, go back to safe and get it
+
+
+true.
+
+19 ?- go(w).
+Yay, you have made it into the tunnel!
+The game is over. Please enter the "halt." command.
+true 
